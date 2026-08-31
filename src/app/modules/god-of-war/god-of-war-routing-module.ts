@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { ListGodOfWarCharacters } from './pages/list-god-of-war-characters.component/list-god-of-war-characters.component';
+
+const routes: Routes = [
+  {
+    path: 'characters',
+    component: ListGodOfWarCharacters,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class GodOfWarRoutingModule { }
+export class GodOfWarRoutingModule {}

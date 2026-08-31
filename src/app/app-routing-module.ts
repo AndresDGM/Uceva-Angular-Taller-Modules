@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule)
   },
   {
+    path: 'godofwar',
+    loadChildren: () => import('./modules/god-of-war/god-of-war-module').then(m => m.GodOfWarModule)
+  },
+  {
     path: '**',
     redirectTo: 'users'
   },

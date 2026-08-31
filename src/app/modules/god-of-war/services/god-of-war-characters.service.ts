@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-
 import { GOD_OF_WAR_CHARACTERS } from '../../../core/config/god-of-war.config';
 import { GodOfWarInterface } from '../interfaces/god-of-war.interface';
 
