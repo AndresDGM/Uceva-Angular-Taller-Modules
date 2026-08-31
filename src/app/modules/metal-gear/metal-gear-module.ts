@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 import { MetalGearRoutingModule } from './metal-gear-routing-module';
 import { MetalGearComponent } from './metal-gear.component'; 
 import { TableMetalGearComponent } from './components/table-metal-gear/table-metal-gear.component';
+import { ListMetalGearComponent } from './pages/list-metal-gear/list-metal-gear.component';
 @NgModule({
   declarations: [
     MetalGearComponent,
     TableMetalGearComponent,
+    ListMetalGearComponent,
   ],
   imports: [
     CommonModule,

@@ -11,24 +11,24 @@ import { Personaje } from "../../modules/metal-gear/interfaces/metal-gear.interf
 export const PERSONAJES_METAL_GEAR: Personaje[] = [
   {
     id: 1,
-    nombre: 'Solid Snake',
-    alias: 'Snake',
+    nombre: 'David',
+    alias: 'Solid Snake',
     rol: 'Protagonista',
     juego: 'Metal Gear Solid',
     
   },
   {
     id: 2,
-    nombre: 'Revolver Ocelot',
-    alias: 'Ocelot',
+    nombre: 'Adamska',
+    alias: 'Revolver Ocelot',
     rol: 'Antagonista',
     juego: 'Metal Gear Solid 3',
     
   },
   {
     id: 3,
-    nombre: 'Otacon',
-    alias: 'Hal Emmerich',
+    nombre: 'Hal Emmerich',
+    alias: 'Otacon',
     rol: 'Aliado',
     juego: 'Metal Gear Solid 2',
     
@@ -43,7 +43,7 @@ export const PERSONAJES_METAL_GEAR: Personaje[] = [
   },
   {
     id: 5,
-    nombre: 'Big Boss',
+    nombre: 'Jack',
     alias: 'Naked Snake',
     rol: 'Protagonista',
     juego: 'Metal Gear Solid 4',
