@@ -17,7 +17,7 @@
  *   alias: 'Snake',
  *   rol: 'Protagonista',
  *   juego: 'Metal Gear Solid',
- *   anio: 1998
+ *   
  * };
  * ```
  */
