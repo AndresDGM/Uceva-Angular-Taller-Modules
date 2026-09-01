@@ -15,6 +15,12 @@ const routes: Routes = [
     loadChildren: () => import('./modules/metal-gear/metal-gear-module').then(m => m.MetalGearModule)
   },
   {
+    path: 'animes',
+    loadChildren: () =>
+      import('./modules/anime/anime-module')
+        .then(m => m.AnimeModule)
+  },
+  {
     path: '**',
     redirectTo: 'users'
   },
