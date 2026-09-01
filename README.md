@@ -126,3 +126,47 @@ src/app/modules/users/components/table-users/
 - Todos los componentes deben pertenecer a un NgModule
 - Mantener una estructura clara favorece la escalabilidad y mantenibilidad
 - Usar Angular CLI evita errores de configuración manual
+
+## API de Anime
+
+### API utilizada
+- **Jikan API v4**: API REST pública y de código abierto para MyAnimeList (MAL). Su propósito es suministrar datos estructurados sobre títulos de anime, detalles de emisión, imágenes, puntuaciones y rankings.
+
+### Endpoint
+- `https://api.jikan.moe/v4/top/anime`
+
+### Método HTTP
+- `GET`
+
+### Servicio
+- `AnimeService` (`src/app/modules/anime/services/anime.service.ts`)
+
+### Respuesta
+La respuesta de la petición está estructurada y tipada a través de la interfaz real `AnimeResponse`:
+
+- `pagination`: Objeto de tipo `Pagination` que encapsula metadatos sobre la paginación de la consulta:
+  - `last_visible_page` (`number`): Número de la última página disponible.
+  - `has_next_page` (`boolean`): Indicador de existencia de páginas siguientes.
+  - `current_page` (`number`): Número de la página actual devuelta.
+  - `items` (`Items`): Resumen de conteos (`count`, `total`, `per_page`).
+- `data`: Arreglo de elementos tipados como `Anime[]` que contiene el catálogo de animes recuperados. Cada objeto `Anime` incluye propiedades como:
+  - `mal_id` (`number`): Identificador único en MyAnimeList.
+  - `title` (`string`): Título principal del anime.
+  - `images` (`{ [key: string]: Image }`): Diccionario de imágenes por formato (`image_url`, `small_image_url`, `large_image_url`).
+  - `score` (`number`): Calificación promedio otorgada por los usuarios.
+  - `episodes` (`number | null`): Total de episodios del anime.
+  - `status` (`Status`): Estado de emisión (`Finished Airing` | `Currently Airing`).
+  - `synopsis` (`string`): Resumen argumental.
+  - `rating` (`Rating`), `season` (`Season | null`), `year` (`number | null`), `type` (`string`), `genres` (`Demographic[]`), entre otros.
+
+### Flujo de datos
+
+```text
+API de Jikan (https://api.jikan.moe/v4/top/anime)
+       ↓ (Petición HTTP GET)
+AnimeService (getTopAnime() -> Observable<AnimeResponse>)
+       ↓ (Suscripción en ngOnInit() -> asigna anime = response.data)
+ListAnimesComponent (Página contenedora / Smart Component)
+       ↓ (Property binding [@anime]="anime")
+TableAnimesComponent (Componente de presentación / Grid de tarjetas)
+```

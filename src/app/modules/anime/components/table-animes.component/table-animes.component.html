@@ -1,0 +1,25 @@
+<div class="anime-grid">
+
+  <article
+    class="anime-card"
+    *ngFor="let item of anime"
+  >
+
+    <img
+      [src]="item.images['jpg'].image_url"
+      [alt]="item.title"
+    >
+
+    <h2>{{ item.title }}</h2>
+
+    <p>
+      ⭐ {{ item.score ?? 'N/A' }}
+    </p>
+
+    <p>
+      Episodios: {{ item.episodes ?? 'N/A' }}
+    </p>
+
+  </article>
+
+</div>
