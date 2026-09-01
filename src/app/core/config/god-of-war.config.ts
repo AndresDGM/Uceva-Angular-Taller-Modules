@@ -1,5 +1,13 @@
 import { GodOfWarInterface } from '../../modules/god-of-war/interfaces/god-of-war.interface';
 
+/**
+ * Configuración estática que contiene la lista de personajes del módulo God of War.
+ *
+ * @remarks
+ * Esta constante sirve como fuente de datos local para el servicio
+ * `GodOfWarCharactersService`, proporcionando información detallada de cada personaje
+ * conforme a la estructura definida en `GodOfWarInterface`.
+ */
 export const GOD_OF_WAR_CHARACTERS: GodOfWarInterface[] = [
   {
     id: 1,
