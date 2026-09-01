@@ -17,4 +17,5 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     { label: 'Usuarios', url: '/users' },
     { label: 'Productos', url: '/products' },
     { label: 'Animes', url: '/animes' },
+    { label: 'Personajes Metal Gear', url: '/metal-gear' },
 ] 
