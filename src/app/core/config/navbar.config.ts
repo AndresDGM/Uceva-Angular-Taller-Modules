@@ -16,4 +16,7 @@ import { NavbarItem } from "../../modules/shared/interfaces/navbar.interface";
 export const NAVBAR_ITEMS: NavbarItem[] = [
     { label: 'Usuarios', url: '/users' },
     { label: 'Productos', url: '/products' },
-] 
+    { label: 'GodOfWar', url: '/godofwar/characters' },
+    { label: 'Animes', url: '/animes' },
+    { label: 'Personajes Metal Gear', url: '/metal-gear' },
+]; 

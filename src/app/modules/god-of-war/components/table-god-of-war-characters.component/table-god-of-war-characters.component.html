@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Alias</th>
+      <th>Especie</th>
+      <th>Origen</th>
+      <th>Rol</th>
+      <th>Arma</th>
+      <th>Juego</th>
+      <th>Nivel de poder</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let character of characters">
+      <td>{{ character.name }}</td>
+      <td>{{ character.alias }}</td>
+      <td>{{ character.species }}</td>
+      <td>{{ character.origin }}</td>
+      <td>{{ character.role }}</td>
+      <td>{{ character.weapon }}</td>
+      <td>{{ character.game }}</td>
+      <td>{{ character.powerLevel }}</td>
+    </tr>
+  </tbody>
+</table>
