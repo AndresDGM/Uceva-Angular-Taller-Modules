@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import { SistemasDeDisenoComponent } from './sistemas-de-diseno.component';
 
@@ -8,6 +9,7 @@ describe('SistemasDeDisenoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterModule.forRoot([])],
       declarations: [SistemasDeDisenoComponent]
     })
     .compileComponents();
