@@ -1,5 +1,15 @@
 import { sistemasdediseno } from '../../modules/sistemas-de-diseno/interfaces/sistemas-de-diseno.interface';
 
+/**
+ * Configuración estática centralizada de los temas de Sistemas de Diseño.
+ *
+ * @remarks
+ * Esta constante almacena la colección de datos que define los conceptos,
+ * definiciones, principios y metodologías (como Diseño Atómico) mostrados
+ * en el módulo de Sistemas de Diseño. Es consumida por `SistemasDeDisenoService`.
+ *
+ * @type {sistemasdediseno[]}
+ */
 export const SISTEMAS_DE_DISENO: sistemasdediseno[] = [
   {
     id: 1,

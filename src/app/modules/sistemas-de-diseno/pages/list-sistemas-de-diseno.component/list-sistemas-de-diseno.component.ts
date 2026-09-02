@@ -49,10 +49,10 @@ export class ListSistemasDeDisenoComponent {
   private sistemasDeDisenoService = inject(SistemasDeDisenoService);
 
   /**
-   * Inicializa el componente y carga los datos.
+   * Inicializa el componente y carga los datos de Sistemas de Diseño.
    *
    * @remarks
-   * Se suscribe al método `getAllSistemasDeDiseno()` del servicio
+   * Se suscribe al método `getAll()` del servicio `SistemasDeDisenoService`
    * y asigna los datos recibidos a la propiedad `sistemasDeDiseno`.
    */
   ngOnInit(): void {

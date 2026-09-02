@@ -2,16 +2,20 @@ import { Component, Input } from '@angular/core';
 import { sistemasdediseno } from '../../interfaces/sistemas-de-diseno.interface';
 
 /**
- * Componente de tabla de Sistemas de Diseño.
+ * Componente de presentación para desplegar la información de Sistemas de Diseño.
  *
- * Se utiliza para mostrar un listado de temas relacionados
- * con los Sistemas de Diseño.
+ * @remarks
+ * Se encarga de renderizar la cuadrícula de tarjetas con los temas, descripciones y conceptos clave
+ * sobre Sistemas de Diseño (como principios, metodologías y Diseño Atómico).
+ * Recibe los datos desde su componente padre (`ListSistemasDeDisenoComponent`) mediante la propiedad `@Input() sistemasDeDiseno`.
  *
- * Este componente recibe los datos desde un componente padre
- * mediante el Input `sistemasDeDiseno`.
+ * Representa un organismo dentro de la arquitectura de Diseño Atómico.
  *
- * Forma parte de la capa de presentación y representa un
- * organismo dentro del sistema de diseño atómico.
+ * @example
+ * ```html
+ * <app-table-sistemas-de-diseno [sistemasDeDiseno]="sistemasDeDiseno">
+ * </app-table-sistemas-de-diseno>
+ * ```
  */
 @Component({
   selector: 'app-table-sistemas-de-diseno',
@@ -22,7 +26,14 @@ import { sistemasdediseno } from '../../interfaces/sistemas-de-diseno.interface'
 export class TableSistemasDeDisenoComponent {
 
   /**
-   * Lista de sistemas de diseño que serán mostrados en la tabla.
+   * Lista de elementos de Sistemas de Diseño que serán mostrados en la cuadrícula/tabla.
+   *
+   * @remarks
+   * Arreglo de objetos tipados según la interfaz `sistemasdediseno[]`.
+   * Proviene de la entrada asignada por el componente contenedor padre.
+   *
+   * @type {sistemasdediseno[]}
+   * @defaultValue []
    */
   @Input() sistemasDeDiseno: sistemasdediseno[] = [];
 
