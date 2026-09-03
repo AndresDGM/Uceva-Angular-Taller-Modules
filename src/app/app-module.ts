@@ -6,7 +6,14 @@ import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { SharedModule } from './modules/shared/shared-module';
 
-
+/**
+ * Módulo raíz de la aplicación.
+ *
+ * @remarks
+ * Este módulo es el punto de partida que inicializa la aplicación Angular,
+ * declara el componente raíz {@link AppComponent}, provee los servicios globales
+ * (HttpClient, Listeners de errores globales) y carga el enrutamiento principal {@link AppRoutingModule}.
+ */
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,3 +31,4 @@ import { SharedModule } from './modules/shared/shared-module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
