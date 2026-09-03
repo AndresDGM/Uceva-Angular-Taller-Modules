@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { SharedModule } from './modules/shared/shared-module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
