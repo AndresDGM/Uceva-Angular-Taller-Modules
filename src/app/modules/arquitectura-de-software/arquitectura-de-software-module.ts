@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared-module';
 
-import { ArquitecturaDeSoftwareRoutingModule } from './arquitectura-de-software-routing-module';
-import { TableArquitecturaDeSoftwareComponent } from './components/table-arquitectura-de-software.component/table-arquitectura-de-software.component';
 import { ArquitecturaDeSoftwareComponent } from './arquitectura-de-software.component';
 import { ListArquitecturaDeSoftwareComponent } from './pages/list-arquitectura-de-software.component/list-arquitectura-de-software.component';
-
+import { TableArquitecturaDeSoftwareComponent } from './components/table-arquitectura-de-software.component/table-arquitectura-de-software.component';
+import { ArquitecturaDeSoftwareRoutingModule } from './arquitectura-de-software-routing-module';
 
 @NgModule({
   declarations: [
-    TableArquitecturaDeSoftwareComponent,
     ArquitecturaDeSoftwareComponent,
-    ListArquitecturaDeSoftwareComponent
+    ListArquitecturaDeSoftwareComponent,
+    TableArquitecturaDeSoftwareComponent,
   ],
   imports: [
     CommonModule,
-    ArquitecturaDeSoftwareRoutingModule
-  ]
+    SharedModule,
+    ArquitecturaDeSoftwareRoutingModule,
+  ],
 })
-export class ArquitecturaDeSoftwareModule { }
+export class ArquitecturaDeSoftwareModule {}
