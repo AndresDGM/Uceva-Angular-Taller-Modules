@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Subtemas</th>
+      <th>Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (principio of principios; track principio.id) {
+      <tr>
+        <td>{{ principio.id }}</td>
+        <td>{{ principio.titulo }}</td>
+        <td>{{ principio.descripcion }}</td>
+        <td>
+          @for (subtema of principio.subtemas; track subtema) {
+            <span>{{ subtema }}</span>
+          }
+        </td>
+        <td>{{ principio.imagenUrl }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
