@@ -29,12 +29,27 @@ import { ArquitecturaDeSoftwareService } from '../../services/arquitectura-de-so
   standalone: false,
 })
 export class ListArquitecturaDeSoftwareComponent {
+  /**
+   * Colección de conceptos de Arquitectura de Software obtenidos desde el servicio.
+   *
+   * @defaultValue `[]`
+   */
   arquitecturaDeSoftware: ArquitecturaDeSoftware[] = [];
 
+  /**
+   * Instancia inyectada del servicio {@link ArquitecturaDeSoftwareService}.
+   */
   private arquitecturaDeSoftwareService = inject(
     ArquitecturaDeSoftwareService
   );
 
+  /**
+   * Hook de ciclo de vida que se ejecuta al inicializar el componente.
+   *
+   * @remarks
+   * Realiza la suscripción al servicio para cargar la lista de conceptos
+   * y los almacena en {@link arquitecturaDeSoftware}.
+   */
   ngOnInit(): void {
     this.arquitecturaDeSoftwareService
       .getAll()

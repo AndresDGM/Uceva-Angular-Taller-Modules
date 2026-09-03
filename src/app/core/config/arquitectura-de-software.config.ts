@@ -1,6 +1,18 @@
 import { ArquitecturaDeSoftware } from '../../modules/arquitectura-de-software/interfaces/arquitectura-de-software.interface';
 
+/**
+ * Configuración estática que contiene los principales conceptos
+ * de Arquitectura de Software vistos durante el curso.
+ *
+ * @remarks
+ * Esta constante sirve como fuente de datos local para el servicio
+ * {@link ArquitecturaDeSoftwareService}, proporcionando información resumida
+ * conforme a la estructura definida en {@link ArquitecturaDeSoftware}.
+ *
+ * @type {ArquitecturaDeSoftware[]}
+ */
 export const ARQUITECTURA_DE_SOFTWARE: ArquitecturaDeSoftware[] = [
+
   {
     id: 1,
     titulo: 'Arquitectura de Software',
