@@ -1,0 +1,30 @@
+<div class="arquitectura-grid">
+
+  <article
+    class="arquitectura-card"
+    *ngFor="let item of sistemasDeDiseno"
+  >
+
+    <div class="card-content">
+
+      <h2>{{ item.titulo }}</h2>
+
+      <p class="descripcion">
+        {{ item.descripcion }}
+      </p>
+
+      <div class="subtemas">
+        <h3>Conceptos clave</h3>
+
+        <ul>
+          <li *ngFor="let subtema of item.subtemas">
+            {{ subtema }}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </article>
+
+</div>
