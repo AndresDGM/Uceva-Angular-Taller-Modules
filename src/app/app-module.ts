@@ -5,12 +5,11 @@ import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { SharedModule } from './modules/shared/shared-module';
-import { TablePrincipiosDeArquitecturaComponents } from './modules/principio-de-arquitectura/components/table-principios-de-arquitectura.components/table-principios-de-arquitectura.components';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TablePrincipiosDeArquitecturaComponents,
   ],
   imports: [
     SharedModule,

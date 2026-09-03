@@ -1,0 +1,85 @@
+.arquitectura-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.arquitectura-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    padding: 20px;
+    background: #f5f7fa;
+  }
+}
+
+.card-content {
+  padding: 20px;
+
+  h2 {
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .descripcion {
+    margin: 0 0 18px;
+    line-height: 1.6;
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+}
+
+.subtemas {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 15px;
+
+  h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #374151;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #6b7280;
+  }
+
+  li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .arquitectura-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .arquitectura-card {
+    img {
+      height: 180px;
+    }
+  }
+}

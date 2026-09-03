@@ -1,1 +1,35 @@
-<p>list-principios-de-arquitectura.component works!</p>
+<div class="arquitectura-grid">
+
+  <article
+    class="arquitectura-card"
+    *ngFor="let principio of principios"
+  >
+
+    <img
+      [src]="principio.imagenUrl"
+      [alt]="principio.titulo"
+    >
+
+    <div class="card-content">
+
+      <h2>{{ principio.titulo }}</h2>
+
+      <p class="descripcion">
+        {{ principio.descripcion }}
+      </p>
+
+      <div class="subtemas">
+        <h3>Conceptos clave</h3>
+
+        <ul>
+          <li *ngFor="let subtema of principio.subtemas">
+            {{ subtema }}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </article>
+
+</div>

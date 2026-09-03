@@ -5,15 +5,14 @@ import { PrincipiosDeArquitecturaRoutingModule } from './principios-de-arquitect
 import { PrincipiosDeArquitecturaComponent } from './principios-de-arquitectura.component';
 import { TablePrincipiosDeArquitecturaComponents } from './components/table-principios-de-arquitectura.components/table-principios-de-arquitectura.components';
 import { ListPrincipiosDeArquitecturaComponent } from './pages/list-principios-de-arquitectura.component/list-principios-de-arquitectura.component';
-import { PrincipiosDeArquitecturaService } from './services/principios-de-arquitectura.service/principios-de-arquitectura.service';
+import { PrincipiosDeArquitecturaService } from './services/principios-de-arquitectura.service';
 
 
 @NgModule({
   declarations: [
     PrincipiosDeArquitecturaComponent,
     TablePrincipiosDeArquitecturaComponents,
-    ListPrincipiosDeArquitecturaComponent,
-    PrincipiosDeArquitecturaService
+    ListPrincipiosDeArquitecturaComponent
   ],
   imports: [
     CommonModule,
